@@ -20,9 +20,17 @@ if (cluster.isMaster){
   const config = require ('./config/default.js');
 	const express= require('express');
 	const app = express();
+	const bodyParser = require('body-parser');
+	const morgan = require('morgan');
+
+	app.use(bodyParser.urlencoded({ extended: false}));
+	app.use(bodyParser.json());
+	app.use(morgan('combined'));
 
 	app.get('/', function(req, res){
-		res.send('Hello World!');
+		res.setHeader('Content-Type', 'text/plain')
+	  res.write('you posted:\n')
+		res.end(JSON.stringify(req.body, null, 2))
 	});
 
 	app.listen(config.port, function(){
