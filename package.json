@@ -1,23 +1,27 @@
 {
-  "name": "mea2n",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.15.0",
-    "cookie-parser": "^1.4.1",
-    "ejs": "^2.4.1",
-    "express": "^4.13.4",
-    "gulp": "^3.9.1",
-    "http": "0.0.0",
-    "mongoose": "^4.4.12",
-    "morgan": "^1.7.0",
-    "os": "^0.1.1",
-    "path": "^0.12.7"
-  }
+    "name": "mea2n",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+
+    "author": "",
+    "license": "ISC",
+
+    "dependencies": {
+        "body-parser": "^1.15.0",
+        "browser-sync": "^2.12.3",
+        "cookie-parser": "^1.4.1",
+        "ejs": "^2.4.1",
+        "express": "^4.13.4",
+        "gulp": "^3.9.1",
+        "http": "0.0.0",
+        "mongoose": "^4.4.12",
+        "morgan": "^1.7.0",
+        "os": "^0.1.1",
+        "path": "^0.12.7"
+    }
 }

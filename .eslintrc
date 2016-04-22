@@ -1,0 +1,15 @@
+{
+	"env": {
+		"node": true,
+			"es6": true
+	},
+		"rules": {
+			"semi": [2, "never"],
+			"strict": [0, "global"],
+			"curly": [2, "multi-line"],
+			"space-before-function-paren": [2, "never"],
+			"comma-dangle": 0,
+			"no-console": 0,
+			"max-len": [2, 120, 4]
+		}
+}
