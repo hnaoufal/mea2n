@@ -15,6 +15,7 @@ if (cluster.isMaster){
 		console.log(`worker ${worker.process.pid} died, spawn new one:`);
 		cluster.fork();
 	}); 
+
 }else {
 
   const config = require ('./config/default.js');
