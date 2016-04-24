@@ -18,11 +18,15 @@ if (cluster.isMaster) {
 
 } else {
 
-    const config = require('../config/default.js'),
+    const config = require('./config/default.js'),
         express = require('express'),
         app = express(),
         bodyParser = require('body-parser'),
         morgan = require('morgan')
+
+    app.set('views',__dirname)
+    app.set('view engine', 'ejs')
+    app.use('/', express.static(__dirname + '/app'))
 
     app.use(bodyParser.urlencoded({
         extended: false
@@ -31,9 +35,7 @@ if (cluster.isMaster) {
     app.use(morgan('combined'))
 
     app.get('/', function(req, res) {
-        res.setHeader('Content-Type', 'text/plain')
-        res.write('you posted:\n')
-        res.end(JSON.stringify(req.body, null, 2))
+      res.render('app/index')
     })
 
     app.listen(config.port, function() {
